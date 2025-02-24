@@ -1,0 +1,94 @@
+/* src/components/styles/NavBar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    position: fixed; /* Fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.navbar-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar-links li {
+    position: relative;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px; /* Add padding for better clickability */
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+.navbar-profile, .navbar-admin-profile {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar-profile .dropdown, .navbar-admin-profile .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: black;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1001; /* Ensure dropdown is above the navbar */
+}
+
+.navbar-profile:hover .dropdown, .navbar-admin-profile:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    padding: 5px 10px;
+}
+
+.dropdown li a {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown li:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown li a:hover {
+    color: #4CAF50; /* Change color on hover */
+}
+
+.navbar-profile .dropdown li a:hover {
+    color: #007bff; /* User hover color */
+}
+
+.navbar-admin-profile .dropdown li a:hover {
+    color: #ff5722; /* Admin hover color */
+}

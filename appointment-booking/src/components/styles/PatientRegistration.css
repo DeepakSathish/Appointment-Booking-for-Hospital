@@ -1,0 +1,109 @@
+/* src/components/styles/PatientRegistration.css */
+.patient-registration-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;
+    background: url("../assets/patient-images.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    image-rendering: -webkit-optimize-contrast; /* Improves rendering of high-resolution images */
+    -webkit-background-size: cover; /* For better quality in webkit browsers */
+    -moz-background-size: cover; /* For better quality in Mozilla browsers */
+    -o-background-size: cover; /* For better quality in Opera */
+    background-size: cover;
+    margin-top: 60px; /* Ensure it starts below the navbar */
+    position: relative; /* Ensure the popup is positioned correctly */
+}
+
+.patient-registration-container {
+    max-width: 400px;
+    padding: 30px; /* Increased padding for better spacing */
+    border: 2px solid #28a745; /* Add a green border to match the theme */
+    border-radius: 15px; /* Increased border radius for a more rounded look */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+    position: relative; /* Ensure the alert popup is positioned correctly */
+}
+
+.patient-registration-container input,
+.patient-registration-container button {
+    width: 100%;
+    padding: 12px; /* Slightly increased padding for inputs and buttons */
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.patient-registration-container button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.patient-registration-container button:hover {
+    background-color: #218838;
+}
+
+.appointment-button {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px; /* Slightly increased padding for appointment button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.appointment-button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+}
+
+.alert-popup {
+    position: absolute; /* Make it absolute to position it above the container */
+    top: 40px; /* Position it above the container */
+    width: 80%;
+    max-width: 350px;
+    margin: 0 auto; /* Center the popup */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    z-index: 2; /* Ensure it's above other elements */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+    animation: fadeInOut 3s ease-in-out; /* Animation for the popup */
+}
+
+.alert-popup.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-popup.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+}
